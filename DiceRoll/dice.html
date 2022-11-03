@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <style></style>
+    <script>
+        function initialize()
+        {
+            randNumOutput = document.getElementById("rndnum");
+            randNumOutput2 = document.getElementById("rndnum2");
+        }
+        function generateRandomNumber()
+        {
+            rndNumber = Math.random();
+            rndNumber *= 6;
+            rndNumber = parseInt(rndNumber);
+            rndNumber += 1;
+            display();
+        }
+        function generateRandomNumber2()
+        {
+            rndNumber2 = Math.random();
+            rndNumber2 *= 6;
+            rndNumber2 = parseInt(rndNumber2);
+            rndNumber2 += 1;
+            display();
+        }
+        function display()
+        {
+            randNumOutput.innerHTML = rndNumber;
+            randNumOutput2.innerHTML = rndNumber2;
+        }
+    </script>
+</head>
+<body onload = "initialize();">
+    Your dice numbers are <span id = "rndnum">0</span> and <span id = "rndnum2">0</span>
+    <button onclick = "generateRandomNumber(); + generateRandomNumber2();" >
+        Generate a New Random Number
+    </button>
+</body>
+</html>
